@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  air_city: MyString
+  air_country: MyString
+  air_code: MyString
+  air_eat: MyText
+  air_tips: MyText
+  air_post: MyText
+
+two:
+  air_city: MyString
+  air_country: MyString
+  air_code: MyString
+  air_eat: MyText
+  air_tips: MyText
+  air_post: MyText

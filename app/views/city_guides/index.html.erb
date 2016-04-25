@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing City Guides</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>City</th>
+      <th>State</th>
+      <th>Country</th>
+      <th>Restaurants</th>
+      <th>See</th>
+      <th>Skip</th>
+      <th>Stay</th>
+      <th>Tips</th>
+      <th>Post</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @city_guides.each do |city_guide| %>
+      <tr>
+        <td><%= city_guide.city %></td>
+        <td><%= city_guide.state %></td>
+        <td><%= city_guide.country %></td>
+        <td><%= city_guide.restaurants %></td>
+        <td><%= city_guide.see %></td>
+        <td><%= city_guide.skip %></td>
+        <td><%= city_guide.stay %></td>
+        <td><%= city_guide.tips %></td>
+        <td><%= city_guide.post %></td>
+        <%= image_tag city_guide.avatar.url(:medium), class: "img-responsive" %>
+        <td><%= link_to 'Show', city_guide %></td>
+        <td><%= link_to 'Edit', edit_city_guide_path(city_guide) %></td>
+        <td><%= link_to 'Destroy', city_guide, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New City guide', new_city_guide_path %>

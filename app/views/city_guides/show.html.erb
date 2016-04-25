@@ -1,0 +1,50 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>City:</strong>
+  <%= @city_guide.city %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @city_guide.state %>
+</p>
+
+<p>
+  <strong>Country:</strong>
+  <%= @city_guide.country %>
+</p>
+
+<p>
+  <strong>Restaurants:</strong>
+  <%= @city_guide.restaurants %>
+</p>
+
+<p>
+  <strong>See:</strong>
+  <%= @city_guide.see %>
+</p>
+
+<p>
+  <strong>Skip:</strong>
+  <%= @city_guide.skip %>
+</p>
+
+<p>
+  <strong>Stay:</strong>
+  <%= @city_guide.stay %>
+</p>
+
+<p>
+  <strong>Tips:</strong>
+  <%= @city_guide.tips %>
+</p>
+
+<p>
+  <strong>Post:</strong>
+  <%= @city_guide.post %>
+</p>
+<%= image_tag @city_guide.avatar.url (:medium) %>
+
+<%= link_to 'Edit', edit_city_guide_path(@city_guide) %> |
+<%= link_to 'Back', city_guides_path %>

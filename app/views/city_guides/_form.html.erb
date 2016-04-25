@@ -1,0 +1,48 @@
+<%= form_for(@city_guide) do |f| %>
+  <% if @city_guide.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@city_guide.errors.count, "error") %> prohibited this city_guide from being saved:</h2>
+
+      <ul>
+      <% @city_guide.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.text_field :city, class: "form-control", placeholder: "the city you visited!" %>
+  </div>
+  <div class="form-group">
+  <%= f.text_field :state, class: "form-control", placeholder: "state" %>
+  </div>
+  <div class="form-group">
+    <%= f.text_field :country, class: "form-control", placeholder: "country" %>
+  </div>
+  <div class="form-group">
+    <%= f.text_area :restaurants, class: "form-control", placeholder: "Please list any restaurants you recommend.  Let us know why!" %>
+  </div>
+  <div class="form-group">
+    <%= f.text_area :see, class:"form-control", placeholder: "What are your must sees?  What did your kids AND you love? Museums, parks, monuments etc." %>
+  </div>
+  <div class="form-group">
+    <%= f.text_area :skip, class: "form-control", placeholder: "What should others in your shoes skip?  A kids museum that was overatted? List anything you would include in your trip nightmare journal" %>
+  </div>
+  <div class="form-group">
+    <%= f.text_area :stay, class: "form-control", placeholder: "Where did you stay? Would you stay again?  Any cons?" %>
+  </div>
+  <div class="form-group">
+    <%= f.text_area :tips, class: "form-control", placeholder: "Any additional tips?  transportation while visiting, gyms, nightlife" %>
+  </div>
+  <div class="form-group">
+    <%= f.text_area :post, class:"form-control", placeholder: "Tell us about your trip!  Share a special moment with your family?  Learn something new?  We want to know about it!"%>
+  </div>
+  <div class="field form-group">
+    <%= f.label "Photos" %><br>
+    <%= f.file_field :avatar %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
